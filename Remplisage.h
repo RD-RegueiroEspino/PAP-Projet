@@ -1,10 +1,8 @@
-//
-//  Remplisage.h
-//  Bezier
-//
-//  Created by Ramón Daniel Regueiro Espiño on 29/12/21.
-//
-
+/*!
+ *\file Remplisage.h
+ *\author{REGUEIRO ESPIÑO, Ramón Daniel et TRIDON, Bastien}
+ *
+ */
 #ifndef Remplisage_h
 #define Remplisage_h
 #include "Casteljau.h"
@@ -25,6 +23,8 @@ public:
     Remplisage(){}
     ~Remplisage(){}
     
+    R2& operator[](int l){return data_[l];}
+    R2 operator[](int l)const {return data_[l];}
 };
 
 /*
