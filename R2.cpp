@@ -34,3 +34,9 @@ R2 operator+(const R2& l,const R2& v){
     w.set_y2(l.get_y2()+v.get_y2());
     return w;
 }
+
+R2 & R2::roundR(){
+    set_y1((int) get_y1());
+    set_y2((int) get_y2());
+    return *this;
+}

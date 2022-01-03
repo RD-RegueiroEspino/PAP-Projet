@@ -20,6 +20,7 @@ public:
     void set_y1(const double y1){y1_=y1;}
     void set_y2(const double y2){y2_=y2;}
     
+    R2 & roundR();
     friend std::ostream & operator<<(std::ostream & st, const R2& v);
 };
 

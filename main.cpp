@@ -8,40 +8,37 @@
 #include "Casteljau.h"
 #include "Bitmap.h"
 #include "auxsdl.h"
-int main() {
-    std::cout<<"Preuve de R2: "<<std::endl;
-    R2 v(5.3,2.1);
-    R2 w=(3.1);
-    std::cout<<v+w<<std::endl;
-    std::cout<<2*v<<std::endl;
 
-    Casteljau proba(3);
-    proba[0]=R2(1,0);
-    proba[1]=R2(0,1);
-    proba[2]=R2(1,2);
-    std::cout<<"Preuve du algorithme de Casteljau: "<<std::endl;
-    w=pointcourbe(proba,0.7);
-    std::cout<<w<<std::endl;
-    
-    std::cout<<"Preuve du Bitmap: "<<std::endl;
-    Bitmap table(4,4);
-    for (int i=0;i<4;i++){
-        for (int j=0;j<4;j++){
-            if (i==j) table.set_p(i,j);
+/*This source code copyrighted by Lazy Foo' Productions (2004-2020)
+and may not be redistributed without written permission.*/
+
+//Using SDL and standard IO
+#include "SDL2/SDL.h"
+
+
+int main(int argc, char ** argv)
+{
+    bool quit = false;
+    SDL_Event event;
+ 
+    SDL_Init(SDL_INIT_VIDEO);
+ 
+    SDL_Window * window = SDL_CreateWindow("SDL2 Displaying Image",
+        SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, 0);
+ 
+    while (!quit)
+    {
+        SDL_WaitEvent(&event);
+ 
+        switch (event.type)
+        {
+        case SDL_QUIT:
+            quit = true;
+            break;
         }
     }
-    table.printBitmap();
-    
-    /*
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
-            printf("error initializing SDL: %s\n", SDL_GetError());
-        }
-        SDL_Window* win = SDL_CreateWindow("GAME",
-                                           SDL_WINDOWPOS_CENTERED,
-                                           SDL_WINDOWPOS_CENTERED,
-                                           1000, 1000, 0);
-        while (1)
-            ;
-     */
+ 
+    SDL_Quit();
+ 
     return 0;
 }
