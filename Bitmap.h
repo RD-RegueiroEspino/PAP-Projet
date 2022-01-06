@@ -26,7 +26,8 @@ public:
     void set_p(const int i, const int j, const int l=1){table_[i][j]=l;}
     
     Bitmap & remplissage(const int auxx, const int auxy);
-    Bitmap & contour();
+    Bitmap & contour_noir(const int auxx, const int auxy);
+    Bitmap & contour_rouge();
 };
 
 Bitmap::Bitmap(const int width,const int heigth){
@@ -71,10 +72,24 @@ Bitmap & Bitmap::remplissage(const int auxx, const int auxy){
     }
     return *this;
 }
+//Ce contour n'est pas bon
+Bitmap & Bitmap::contour_noir(const int auxx, const int auxy){
+    int j=(int)(get_width()/12)-1;
+    int k=(int)(get_heigth()/12)-1;
+    (*this).set_p(auxx,auxy);
+    (*this).set_p(auxx,auxy-k);
+    (*this).set_p(auxx+j,auxy);
+    (*this).set_p(auxx-j,auxy);
+    (*this).set_p(auxx-j,auxy+k);
+    (*this).set_p(auxx-j,auxy-k);
+    (*this).set_p(auxx+j,auxy+k);
+    (*this).set_p(auxx+j,auxy-k);
+    return *this;
+}
 
 //On sait que les lettres ne van utiliser les coins du Bitmap. Donc, pour favoriser l'optimisation, on ne considerara ces points.
 //Sinon, il suffira de changer le code en vérifiant aussy l'hypothèse de que le point considérée est dans le Bitmap.
-Bitmap & Bitmap::contour(){
+Bitmap & Bitmap::contour_rouge(){
     for (int i=2;i<get_width()-2;i++){
         for (int j=2;j<get_heigth()-2;j++){
             if ((*this).get_p(i,j)==1){

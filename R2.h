@@ -26,4 +26,6 @@ public:
 
 R2 operator*(const double l,const R2& v);
 R2 operator+(const R2& l,const R2& v);
+
+R2 operator-(const R2& l,const R2& v);
 #endif /* R2_h */

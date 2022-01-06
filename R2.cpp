@@ -40,3 +40,10 @@ R2 & R2::roundR(){
     set_y2((int) get_y2());
     return *this;
 }
+
+R2 operator-(const R2& l,const R2& v){
+    R2 w;
+    w.set_y1(l.get_y1()-v.get_y1());
+    w.set_y2(l.get_y2()-v.get_y2());
+    return w;
+}
