@@ -25,7 +25,7 @@ public:
     int get_p(const int i,const int j) const {return table_[i][j];}
     void set_p(const int i, const int j, const int l=1){table_[i][j]=l;}
     
-    Bitmap & remplissage(const int auxx, const int auxy);
+    Bitmap & remplissage_point(const int auxx, const int auxy);
     Bitmap & contour_noir(const int auxx, const int auxy);
     Bitmap & contour_rouge();
 };
@@ -57,7 +57,7 @@ void Bitmap::printBitmap(){
         std::cout<<"]"<<std::endl;
     }
 }
-Bitmap & Bitmap::remplissage(const int auxx, const int auxy){
+Bitmap & Bitmap::remplissage_point(const int auxx, const int auxy){
     for (int j=0;j<(int)get_width()/12;j++){
         for (int k=0;k<(int)get_heigth()/12;k++){
             (*this).set_p(auxx-j,auxy);

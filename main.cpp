@@ -13,19 +13,21 @@
 int main()
 {
     std::cout<<"Bitmap de C: "<<std::endl;
+    int width=40;
+    int heigth=50;
+    
+    //Lettre C
         Casteljau proba(3);
         proba[0]=R2(0.2,0.6);
         proba[1]=R2(0.5,0.1);
         proba[2]=R2(0.8,0.6);
-        int size=20;
+        int size=std::max(width,heigth);
         R2 T[size];
         T[0]=proba[0];
         T[size-1]=proba[2];
         for (int i=1;i<size;i++){
             T[i]=pointcourbe(proba,i/(double)size);
         }
-        int width=30;
-        int heigth=30;
         Bitmap table(width,heigth);
         R2 aux;
         int auxx;
@@ -34,7 +36,7 @@ int main()
             aux=T[i];
             auxx=int(width*aux.get_y1());
             auxy=int(heigth*aux.get_y2());
-            table.remplissage(auxx,auxy);
+            table.remplissage_point(auxx,auxy);
         }
         table.printBitmap();
     return 0;
