@@ -16,9 +16,7 @@ Deuxième option: distance entre t
  Problème d'affichage: comme on sait les points qu'on a considére?
 */
 
-class Remplisage: public Casteljau{
-private:
-    R2 proba;
+class Remplisage: public R2{
 public:
     Remplisage(){}
     ~Remplisage(){}
@@ -26,6 +24,7 @@ public:
     R2& operator[](int l){return data_[l];}
     R2 operator[](int l)const {return data_[l];}
 };
+
 
 /*
 //Algorithme pour le remplisage:
