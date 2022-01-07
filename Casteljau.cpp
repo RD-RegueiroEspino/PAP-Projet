@@ -24,7 +24,6 @@ Casteljau::Casteljau(const Casteljau & v){
     }
 }
 
- //Point t de la courbe de Bézier:
 R2 pointcourbe(Casteljau & T, const double t){
     if (t<0 || t>1) throw "Wrong value";
     Casteljau L=T;

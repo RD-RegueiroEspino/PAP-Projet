@@ -24,5 +24,8 @@ public:
     
     int get_size()const{return size_;}
 };
+/*!
+ * \brief {Calcul de l'ensemble des points considérés à partir des points initials}
+ */
 void Calcul(Casteljau E, Remplisage & T);
 #endif /* Remplisage_h */

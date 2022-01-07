@@ -24,6 +24,8 @@ public:
     
     int get_size()const{return size_;}
 };
-
+/*!
+ * \brief {Calcul du valeur de la courbe de Bezier en t}
+ */
 R2 pointcourbe(Casteljau & T, const double t);
 #endif /* Casteljau_h */
