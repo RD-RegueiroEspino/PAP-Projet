@@ -7,6 +7,7 @@
 #ifndef Bitmap_h
 #define Bitmap_h
 #include <iostream>
+#include "Remplisage.h"
 
 class Bitmap{
 protected:
@@ -28,7 +29,19 @@ public:
     Bitmap & remplissage_point(const int auxx, const int auxy);
     Bitmap & contour_noir(const int auxx, const int auxy);
     Bitmap & contour_rouge();
+    
+    void coloration(Bitmap & table,Remplisage T);
 };
+
+void Bitmap::printBitmap(){
+    for (int i=0;i<get_width();i++){
+        std::cout<<"[";
+        for (int j=0;j<get_heigth();j++){
+            std::cout<<table_[i][j]<<" ";
+        }
+        std::cout<<"]"<<std::endl;
+    }
+}
 
 Bitmap::Bitmap(const int width,const int heigth){
     if (width<=0 || heigth <=0){
@@ -47,7 +60,7 @@ Bitmap::Bitmap(const int width,const int heigth){
 Bitmap::~Bitmap(){
     delete[] table_;
 }
-
+/*
 void Bitmap::printBitmap(){
     for (int i=0;i<get_width();i++){
         std::cout<<"[";
@@ -57,6 +70,7 @@ void Bitmap::printBitmap(){
         std::cout<<"]"<<std::endl;
     }
 }
+ */
 Bitmap & Bitmap::remplissage_point(const int auxx, const int auxy){
     for (int j=0;j<(int)get_width()/14;j++){
         for (int k=0;k<(int)get_heigth()/14;k++){
@@ -138,4 +152,27 @@ void Remplisage(int width,int heigth, R2 T[int size]){
     table.printBitmap();
 }
 */
+void coloration(Bitmap & table,Remplisage T){
+    R2 aux;
+    int auxx;
+    int auxy;
+    for (int i=0;i<T.get_size();i++){
+        aux=T[i];
+        auxx=int(table.get_width()*(aux.get_y1()));
+        auxy=int(table.get_heigth()*(aux.get_y2()));
+        table.remplissage_point(auxx,auxy);
+    }
+}
+/*
+Bitmap & Bitmap::coloration(Remplisage T){
+    int auxx;
+    int auxy;
+    for (int i=0;i<T.get_size();i++){
+        auxx=int((*this).get_width()*(T[i].get_y1()));
+        auxy=int((*this).get_heigth()*(T[i].get_y2()));
+        (*this).remplissage_point(auxx,auxy);
+    }
+    return *this;
+}
+ */
 #endif /* Bitmap_h */
