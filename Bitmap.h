@@ -6,7 +6,7 @@
 
 #ifndef Bitmap_h
 #define Bitmap_h
-#include <ostream>
+#include <iostream>
 
 class Bitmap{
 protected:
@@ -58,8 +58,8 @@ void Bitmap::printBitmap(){
     }
 }
 Bitmap & Bitmap::remplissage_point(const int auxx, const int auxy){
-    for (int j=0;j<(int)get_width()/12;j++){
-        for (int k=0;k<(int)get_heigth()/12;k++){
+    for (int j=0;j<(int)get_width()/14;j++){
+        for (int k=0;k<(int)get_heigth()/14;k++){
             (*this).set_p(auxx-j,auxy);
             (*this).set_p(auxx+j,auxy);
             (*this).set_p(auxx,auxy-k);
