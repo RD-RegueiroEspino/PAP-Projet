@@ -1,7 +1,6 @@
 /*!
  *\file R2.cpp
  *\author{REGUEIRO ESPIÑO, Ramón Daniel et TRIDON, Bastien}
- *
  */
 #include <stdio.h>
 #include "R2.h"

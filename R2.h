@@ -1,11 +1,14 @@
 /*!
  *\file R2.h
  *\author{REGUEIRO ESPIÑO, Ramón Daniel et TRIDON, Bastien}
- *
  */
 #ifndef R2_h
 #define R2_h
 #include <ostream>
+/*!
+ * \class {R2}
+ * \brief {Classe représentant R^2 et contenant les opérations qu'on a besoin pour la manipuler}
+ */
 class R2{
 protected:
     double y1_;
@@ -20,12 +23,14 @@ public:
     void set_y1(const double y1){y1_=y1;}
     void set_y2(const double y2){y2_=y2;}
     
+    /*!
+     * \brief {Arrondir aux nombres entiers pour connaître la possition avec des pixels.}
+     */
     R2 & roundR();
     friend std::ostream & operator<<(std::ostream & st, const R2& v);
 };
 
 R2 operator*(const double l,const R2& v);
 R2 operator+(const R2& l,const R2& v);
-
 R2 operator-(const R2& l,const R2& v);
 #endif /* R2_h */

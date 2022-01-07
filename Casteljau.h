@@ -1,14 +1,15 @@
 /*!
  *\file Casteljau.h
  *\author{REGUEIRO ESPIÑO, Ramón Daniel et TRIDON, Bastien}
- *
  */
-//Calcul des points de la courbe de Bézier en utilisant l'algorithme de Casteljau
 
 #ifndef Casteljau_h
 #define Casteljau_h
 #include "R2.h"
-
+/*!
+ * \class {Casteljau}
+ * \brief {Classe pour obtenir la valeur de la courbe de Bézier dans un point en utilisant l'algorithme de Casteljau.}
+ */
 class Casteljau: public R2{
 protected:
     int size_;

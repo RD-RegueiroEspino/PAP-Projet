@@ -1,7 +1,6 @@
 /*!
  *\file auxsdl.h
  *\author{REGUEIRO ESPIÑO, Ramón Daniel et TRIDON, Bastien}
- *
  */
 
 #ifndef auxsdl_h
