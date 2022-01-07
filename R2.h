@@ -27,6 +27,9 @@ public:
      * \brief {Arrondir aux nombres entiers pour connaître la possition avec des pixels.}
      */
     R2 & roundR();
+    /*!
+     * \brief {Montrer le élément de R2 (non nécéssaire pour le Projet, mais util pour coder)}
+     */
     friend std::ostream & operator<<(std::ostream & st, const R2& v);
 };
 
