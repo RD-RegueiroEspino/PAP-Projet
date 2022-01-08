@@ -2,7 +2,6 @@
  *\file Casteljau.h
  *\author{REGUEIRO ESPIÑO, Ramón Daniel et TRIDON, Bastien}
  */
-
 #ifndef Casteljau_h
 #define Casteljau_h
 #include "R2.h"

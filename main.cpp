@@ -7,33 +7,24 @@
 #include "Casteljau.h"
 #include "Bitmap.h"
 #include "Remplisage.h"
+//#include "Lettre.h"
 //#include "auxsdl.h"
 
 int main()
 {
-    std::cout<<"Bitmap: "<<std::endl;
-    int width=40;
-    int heigth=50;
+    int width;
+    int heigth;
+    int x;
+    char lettre;
+    std::cout<<"Introduce the width: "<<std::endl;
+    std::cin>>width;
+    std::cout<<"Introduce the heigth: "<<std::endl;
+    std::cin>>heigth;
+    std::cout<<"Introduce the letter: "<<std::endl;
+    std::cin>>lettre;
+    x=lettre;
     Bitmap table(width,heigth);
-    int size=std::max(width,heigth);
-    Remplisage T(size);
-    //Lettre I
-        Casteljau I1(2);
-        Casteljau I2(2);
-        Casteljau I3(2);
-        I1[0]=R2(0.15,0.3);
-        I1[1]=R2(0.15,0.7);
-        I2[0]=R2(0.15,0.5);
-        I2[1]=R2(0.85,0.5);
-        I3[0]=R2(0.85,0.3);
-        I3[1]=R2(0.85,0.7);
-        Calcul(I1,T);
-        coloration(table,T);
-        Calcul(I2,T);
-        coloration(table,T);
-        Calcul(I3,T);
-        coloration(table,T);
-        table.contour_rouge();
-        table.printBitmap();
+    selection(table,x);
+    std::cout<<x<<std::endl;
     return 0;
 }
