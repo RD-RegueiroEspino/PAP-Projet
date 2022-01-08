@@ -101,7 +101,7 @@ Bitmap & Bitmap::contour_rouge(){
     return *this;
 }
 
-void coloration(Bitmap & table,Remplisage T){
+void coloration(Bitmap & table,Remplissage T){
     R2 aux;
     int auxx;
     int auxy;
@@ -114,7 +114,7 @@ void coloration(Bitmap & table,Remplisage T){
 }
 void printLettreA(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau A1(2);
     Casteljau A2(2);
     Casteljau A3(2);
@@ -135,7 +135,7 @@ void printLettreA(Bitmap & table){
 }
 void printLettreB(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau B1(2);
     Casteljau B2(3);
     Casteljau B3(3);
@@ -157,7 +157,7 @@ void printLettreB(Bitmap & table){
     table.printBitmap();}
 void printLettreC(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau C1(3);
     C1[0]=R2(0.2,0.6);
     C1[1]=R2(0.5,0.1);
@@ -169,7 +169,7 @@ void printLettreC(Bitmap & table){
 }
 void printLettreD(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau D1(2);
     Casteljau D2(3);
     D1[0]=R2(0.15,0.35);
@@ -186,7 +186,7 @@ void printLettreD(Bitmap & table){
 }
 void printLettreE(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau E1(2);
     Casteljau E2(2);
     Casteljau E3(2);
@@ -212,7 +212,7 @@ void printLettreE(Bitmap & table){
 }
 void printLettreF(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau F1(2);
     Casteljau F2(2);
     Casteljau F3(2);
@@ -233,7 +233,7 @@ void printLettreF(Bitmap & table){
 }
 void printLettreG(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau G1(3);
     Casteljau G2(2);
     Casteljau G3(2);
@@ -255,7 +255,7 @@ void printLettreG(Bitmap & table){
 }
 void printLettreH(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau H1(2);
     Casteljau H2(2);
     Casteljau H3(2);
@@ -276,7 +276,7 @@ void printLettreH(Bitmap & table){
 }
 void printLettreI(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau I1(2);
     Casteljau I2(2);
     Casteljau I3(2);
@@ -297,7 +297,7 @@ void printLettreI(Bitmap & table){
 }
 void printLettreJ(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau J1(2);
     Casteljau J2(2);
     Casteljau J3(3);
@@ -319,7 +319,7 @@ void printLettreJ(Bitmap & table){
 }
 void printLettreK(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau K1(2);
     Casteljau K2(2);
     Casteljau K3(2);
@@ -340,7 +340,7 @@ void printLettreK(Bitmap & table){
 }
 void printLettreL(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau L1(2);
     Casteljau L2(2);
     L1[0]=R2(0.15,0.35);
@@ -356,7 +356,7 @@ void printLettreL(Bitmap & table){
 }
 void printLettreM(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau M1(2);
     Casteljau M2(2);
     Casteljau M3(2);
@@ -382,7 +382,7 @@ void printLettreM(Bitmap & table){
 }
 void printLettreN(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau N1(2);
     Casteljau N2(2);
     Casteljau N3(2);
@@ -403,7 +403,7 @@ void printLettreN(Bitmap & table){
 }
 void printLettreO(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau O1(3);
     Casteljau O2(3);
     Casteljau O3(3);
@@ -433,7 +433,7 @@ void printLettreO(Bitmap & table){
 }
 void printLettreP(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau P1(2);
     Casteljau P2(3);
     P1[0]=R2(0.15,0.3);
@@ -450,7 +450,7 @@ void printLettreP(Bitmap & table){
 }
 void printLettreQ(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau Q1(3);
     Casteljau Q2(3);
     Casteljau Q3(3);
@@ -486,7 +486,7 @@ void printLettreQ(Bitmap & table){
 }
 void printLettreR(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau R1(2);
     Casteljau R_2(2);
     Casteljau R3(3);
@@ -508,7 +508,7 @@ void printLettreR(Bitmap & table){
 }
 void printLettreS(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau S1(3);
     Casteljau S2(3);
     Casteljau S3(2);
@@ -531,7 +531,7 @@ void printLettreS(Bitmap & table){
 }
 void printLettreT(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau T1(2);
     Casteljau T2(2);
     T1[0]=R2(0.15,0.3);
@@ -547,7 +547,7 @@ void printLettreT(Bitmap & table){
 }
 void printLettreU(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau U1(3);
     Casteljau U2(2);
     Casteljau U3(2);
@@ -569,7 +569,7 @@ void printLettreU(Bitmap & table){
 }
 void printLettreV(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau V1(2);
     Casteljau V2(2);
     V1[0]=R2(0.15,0.25);
@@ -585,7 +585,7 @@ void printLettreV(Bitmap & table){
 }
 void printLettreW(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau W1(2);
     Casteljau W2(2);
     Casteljau W3(2);
@@ -611,7 +611,7 @@ void printLettreW(Bitmap & table){
 }
 void printLettreX(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau X1(2);
     Casteljau X2(2);
     X1[0]=R2(0.15,0.25);
@@ -627,7 +627,7 @@ void printLettreX(Bitmap & table){
 }
 void printLettreY(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau Y1(2);
     Casteljau Y2(2);
     Casteljau Y3(2);
@@ -648,7 +648,7 @@ void printLettreY(Bitmap & table){
 }
 void printLettreZ(Bitmap & table){
     int size=std::max(table.get_width(),table.get_heigth());
-    Remplisage T(size);
+    Remplissage T(size);
     Casteljau Z1(2);
     Casteljau Z2(2);
     Casteljau Z3(2);

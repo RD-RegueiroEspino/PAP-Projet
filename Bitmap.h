@@ -6,32 +6,89 @@
 #ifndef Bitmap_h
 #define Bitmap_h
 #include <iostream>
-#include "Remplisage.h"
+#include "Remplissage.h"
 
 class Bitmap{
 protected:
-    int width_;
-    int heigth_;
-    int **table_;
+    int width_;/*!< Largueur du bitmap*/
+    int heigth_;/*!< Hauteur du bitmap*/
+    int **table_;/*!<Objet pour représenter le bitmap*/
 public:
+    /*!
+     *\fn Bitmap(const int width,const int heigth)
+     *\brief {Constructeur}
+     *\param[in] width Largueur du bitmap
+     *\param[in] heigth Hauteur du bitmap
+     */
     Bitmap(const int width,const int heigth);
+    /*!
+     *\fn Bitmap()
+     *\brief {Destructeur}
+     */
     ~Bitmap();
+    /*!
+     *\fn Bitmap(const Bitmap & v)
+     *\brief {Constructeur de copie}
+     *\param[in] v Objet à copier
+     */
     Bitmap(const Bitmap & v);
+    /*!
+     *\fn int get_width() const
+     *\brief {Obtention de la largueur du bitmap}
+     */
     int get_width() const {return width_;}
+    /*!
+     *\fn Bitmap(const Bitmap & v)
+     *\brief {Obtention de l'hauteur du bitmap}
+     */
     int get_heigth() const {return heigth_;}
-    //int& operator[](int i,int j){return table_[i[j]];}
-   // int operator[](int i,int j)const {return table_[i[j]];}
-    
+    /*!
+     *\fn int get_p(const int i,const int j) const
+     *\brief {Obtention du valeur [ i ] [ j ] du objet}
+     *\param[in] i Premier paramétre a considérer dans l'objet
+     *\param[in] j Deuxième paramétre a considérer dans l'objet
+     */
     int get_p(const int i,const int j) const {return table_[i][j];}
+    /*!
+     *\fn void set_p(const int i, const int j, const int l=1)
+     *\brief {Changer le valeur [ i ] [ j ] du objet}
+     *\param[in] i Premier paramétre a considérer dans l'objet
+     *\param[in] j Deuxième paramétre a considérer dans l'objet
+     *\param[in] l Valeur à introduir dans l'objet
+     */
     void set_p(const int i, const int j, const int l=1){table_[i][j]=l;}
-    
+    /*!
+     *\fn Bitmap & remplissage_point(const int auxx, const int auxy)
+     *\brief {Remplissage du bitmap}
+     *\param[in] auxx Premier paramètre du objet
+     *\param[in] auxy Deuxième paramètre du objet
+     */
     Bitmap & remplissage_point(const int auxx, const int auxy);
+    /*!
+     *\fn Bitmap & contour_noir(const int auxx, const int auxy)
+     *\brief {Obtention du contour du bitmap}
+     *\param[in] auxx Premier paramètre du objet
+     *\param[in] auxy Deuxième paramètre du objet
+     */
     Bitmap & contour_noir(const int auxx, const int auxy);
+    /*!
+     *\fn Bitmap & contour_rouge()
+     *\brief {Ajouter le contour rouge}
+     */
     Bitmap & contour_rouge();
-    Bitmap & printLettre();
+    /*!
+     *\fn void printBitmap()
+     *\brief {Montrer dans l'écran l'objet}
+     */
     void printBitmap();
 };
-void coloration(Bitmap & table,Remplisage T);
+/*!
+ *\fn void coloration(Bitmap & table,Remplissage T)
+ *\brief {Ajouter la lettre au bitmap}
+ *\param[in] table Bitmap
+ *\param[in] T Valeurs de la courbe
+ */
+void coloration(Bitmap & table,Remplissage T);
 void printLettreA(Bitmap & table);
 void printLettreB(Bitmap & table);
 void printLettreC(Bitmap & table);

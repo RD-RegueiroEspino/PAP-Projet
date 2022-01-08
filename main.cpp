@@ -6,7 +6,7 @@
 #include "R2.h"
 #include "Casteljau.h"
 #include "Bitmap.h"
-#include "Remplisage.h"
+#include "Remplissage.h"
 //#include "Lettre.h"
 //#include "auxsdl.h"
 
