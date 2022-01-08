@@ -15,7 +15,7 @@ protected:
     double y2_;/*!< Deuxiéme élément*/
 public:
     /*!
-     *\fn R2(double y1=0, double y2=0);
+     *\fn R2(double y1=0, double y2=0)
      * \brief {Constructeur}
      * \param[in] y1 Premier élément
      * \param[in] y2 Deuxiéme élément
@@ -27,7 +27,7 @@ public:
      */
     ~R2(){}
     /*!
-     *\fn R2(const R2& v);
+     *\fn R2(const R2& v)
      * \brief {Constructeur de copie}
      * \param[in] v Élément R2 à copier
      */
