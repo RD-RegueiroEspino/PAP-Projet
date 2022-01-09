@@ -22,8 +22,8 @@ int main()
     std::cout<<"ASCII value of the chosen letter:" <<std::endl;
     std::cout<<x <<std::endl;
 
-    AffichageSDL test;
-    test.Dessine(x, width, heigth);
+    AffichageSDL lettreSDL;
+    lettreSDL.Dessine(x, width, heigth);
 
     return 0;
 }
