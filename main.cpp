@@ -19,9 +19,8 @@ int main()
     std::cout<<"Introduce the letter (capital letter): "<<std::endl;
     std::cin>>lettre;
     x=lettre;
-    /*Bitmap table(width,heigth);
-    selection(table,x); */
-    std::cout<<x<<std::endl;
+    std::cout<<"ASCII value of the chosen letter:" <<std::endl;
+    std::cout<<x <<std::endl;
 
     AffichageSDL test;
     test.Dessine(x, width, heigth);
