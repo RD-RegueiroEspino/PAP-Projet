@@ -12,13 +12,13 @@
  */
 class Remplissage{
 private:
-    int size_;/*!< Taille du objet*/
+    int size_;/*!< Taille de l'objet*/
     R2 *donnes_;/*!< Objet d'éléments R2*/
 public:
     /*!
      *\fn Remplisage(int size)
      * \brief {Constructeur}
-     * \param[in] size Taille du objet à créer
+     * \param[in] size Taille de l'objet à créer
      */
     Remplissage(int size);
     /*!
@@ -34,26 +34,26 @@ public:
     Remplissage(const Remplissage& copy);
     /*!
      *\fn R2& operator[](int l)const
-     * \brief {Écriture d'un élément du objet}
-     * \param[in] l Position du élément dans l'objet
+     * \brief {Écriture d'un élément de l'objet}
+     * \param[in] l Position de l'élément dans l'objet
      */
     R2& operator[](int l){return donnes_[l];}
     /*!
      *\fn R2 operator[](int l)const
-     * \brief {Lecture de chaque élément du objet}
-     * \param[in] l Position du élément dans l'objet
+     * \brief {Lecture de chaque élément de l'objet}
+     * \param[in] l Position de l'élément dans l'objet
      */
     R2 operator[](int l)const {return donnes_[l];}
     /*!
      *\fn int get_size()const
-     * \brief {Obtention de la taille du objet}
+     * \brief {Obtention de la taille de l'objet}
      */
     int get_size()const{return size_;}
 };
 /*!
  *\fn void Calcul(Casteljau E, Remplisage & T)
- * \brief {Calcul des valeurs dans la courbe des points du objet}
- * \param[in] E Points de côntrol de la courbe
+ * \brief {Calcul des valeurs dans la courbe des points de l'objet}
+ * \param[in] E Points de contrôle de la courbe
  * \param[in] T Points à calculer
 
  */

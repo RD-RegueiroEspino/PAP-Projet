@@ -11,7 +11,7 @@
  */
 class Casteljau: public R2{
 protected:
-    int size_;  /*!< Taille du objet*/
+    int size_;  /*!< Taille de l'objet*/
     R2 *data_;  /*!< Objet d'éléments R2*/
 public:
     /*!
@@ -33,19 +33,19 @@ public:
     Casteljau(const Casteljau & v);
     /*!
      *\fn R2& operator[](int l)
-     * \brief {Écriture d'un élément du objet}
-     * \param[in] l Position du élément dans l'objet
+     * \brief {Écriture d'un élément de l'objet}
+     * \param[in] l Position de l'élément dans l'objet
      */
     R2& operator[](int l){return data_[l];}
     /*!
      *\fn R2 operator[](int l)
-     * \brief {Lecture de chaque élément du objet}
-     * \param[in] l Position du élément dans l'objet
+     * \brief {Lecture de chaque élément de l'objet}
+     * \param[in] l Position de l'élément dans l'objet
      */
     R2 operator[](int l)const {return data_[l];}
     /*!
      *\fn int get_size()const
-     * \brief {Obtention de la taille du objet}
+     * \brief {Obtention de la taille de l'objet}
      */
     int get_size()const{return size_;}
 };
@@ -53,7 +53,7 @@ public:
  *\fn R2 pointcourbe(Casteljau & T, const double t)
  * \brief {Calcul du point t de la courbe}
  * \param[in] T Objet de la classe Casteljau
- * \param[in] t Valeur de [0,1] pour lequelle on veut connaître le point de la courbe
+ * \param[in] t Valeur de [0,1] pour laquelle on veut connaître le point de la courbe
  */
 R2 pointcourbe(Casteljau & T, const double t);
 #endif /* Casteljau_h */

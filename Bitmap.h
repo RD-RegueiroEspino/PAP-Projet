@@ -13,6 +13,7 @@ protected:
     int width_;/*!< Largueur du bitmap*/
     int heigth_;/*!< Hauteur du bitmap*/
     int **table_;/*!<Objet pour représenter le bitmap*/
+    
 public:
     /*!
      *\fn Bitmap(const int width,const int heigth)
@@ -34,43 +35,41 @@ public:
     Bitmap(const Bitmap & v);
     /*!
      *\fn int get_width() const
-     *\brief {Obtention de la largueur du bitmap}
+     *\brief {Obtention de la largeur du bitmap}
      */
     int get_width() const {return width_;}
     /*!
      *\fn Bitmap(const Bitmap & v)
-     *\brief {Obtention de l'hauteur du bitmap}
+     *\brief {Obtention de la hauteur du bitmap}
+     */
+     int** get_table() const {return table_;}
+    /*!
+     *\fn Bitmap(const Bitmap & v)
+     *\brief {Obtention de la table du bitmap}
      */
     int get_heigth() const {return heigth_;}
     /*!
      *\fn int get_p(const int i,const int j) const
-     *\brief {Obtention du valeur [ i ] [ j ] du objet}
-     *\param[in] i Premier paramétre a considérer dans l'objet
-     *\param[in] j Deuxième paramétre a considérer dans l'objet
+     *\brief {Obtention du valeur [ i ] [ j ] de l'objet}
+     *\param[in] i Premier paramètre à considérer dans l'objet
+     *\param[in] j Deuxième paramètre à considérer dans l'objet
      */
     int get_p(const int i,const int j) const {return table_[i][j];}
     /*!
      *\fn void set_p(const int i, const int j, const int l=1)
-     *\brief {Changer le valeur [ i ] [ j ] du objet}
-     *\param[in] i Premier paramétre a considérer dans l'objet
-     *\param[in] j Deuxième paramétre a considérer dans l'objet
+     *\brief {Changer le valeur [ i ] [ j ] de l'objet}
+     *\param[in] i Premier paramètre à considérer dans l'objet
+     *\param[in] j Deuxième paramètre à considérer dans l'objet
      *\param[in] l Valeur à introduir dans l'objet
      */
     void set_p(const int i, const int j, const int l=1){table_[i][j]=l;}
     /*!
      *\fn Bitmap & remplissage_point(const int auxx, const int auxy)
      *\brief {Remplissage du bitmap}
-     *\param[in] auxx Premier paramètre du objet
-     *\param[in] auxy Deuxième paramètre du objet
+     *\param[in] auxx Premier paramètre de l'objet
+     *\param[in] auxy Deuxième paramètre de l'objet
      */
     Bitmap & remplissage_point(const int auxx, const int auxy);
-    /*!
-     *\fn Bitmap & contour_noir(const int auxx, const int auxy)
-     *\brief {Obtention du contour du bitmap}
-     *\param[in] auxx Premier paramètre du objet
-     *\param[in] auxy Deuxième paramètre du objet
-     */
-    Bitmap & contour_noir(const int auxx, const int auxy);
     /*!
      *\fn Bitmap & contour_rouge()
      *\brief {Ajouter le contour rouge}
@@ -78,7 +77,7 @@ public:
     Bitmap & contour_rouge();
     /*!
      *\fn void printBitmap()
-     *\brief {Montrer dans l'écran l'objet}
+     *\brief {Montrer l'objet à l'écran }
      */
     void printBitmap();
 };

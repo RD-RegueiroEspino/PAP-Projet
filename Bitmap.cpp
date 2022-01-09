@@ -56,24 +56,10 @@ Bitmap & Bitmap::remplissage_point(const int auxx, const int auxy){
     }
     return *this;
 }
-//Ce contour n'est pas bon
-Bitmap & Bitmap::contour_noir(const int auxx, const int auxy){
-    int j=(int)(get_width()/14)-1;
-    int k=(int)(get_heigth()/14)-1;
-    (*this).set_p(auxx,auxy);
-    (*this).set_p(auxx,auxy-k);
-    (*this).set_p(auxx+j,auxy);
-    (*this).set_p(auxx-j,auxy);
-    (*this).set_p(auxx-j,auxy+k);
-    (*this).set_p(auxx-j,auxy-k);
-    (*this).set_p(auxx+j,auxy+k);
-    (*this).set_p(auxx+j,auxy-k);
-    return *this;
-}
 
 /*!
- *On sait que les lettres ne van utiliser les coins du Bitmap. Donc, pour favoriser l'optimisation, on ne considerara ces points.
- *Sinon, il suffira de changer le code en vérifiant aussy l'hypothèse de que le point considérée est dans le Bitmap.
+ *On sait que les lettres ne vont pas utiliser les coins du Bitmap. Donc, pour favoriser l'optimisation, on ne considerera pas ces points.
+ *Sinon, il suffira de changer le code en vérifiant aussi l'hypothèse: le point considéré est dans le Bitmap.
  */
 Bitmap & Bitmap::contour_rouge(){
     for (int i=2;i<get_width()-2;i++){
