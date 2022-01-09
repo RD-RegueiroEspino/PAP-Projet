@@ -3,7 +3,7 @@
  *\author{REGUEIRO ESPIÑO, Ramón Daniel et TRIDON, Bastien}
  */
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include "Bitmap.h"
 
 /*!
