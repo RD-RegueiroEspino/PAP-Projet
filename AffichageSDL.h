@@ -6,11 +6,20 @@
 #include <SDL.h>
 #include "Bitmap.h"
 
-
+/*!
+ * \class {AffichageSDL}
+ * \brief {Classe permettant de simplifier l'usage de la SDL dans notre projet}
+ */
 class AffichageSDL{
 
     public:
-    
+        /*!
+        * \fn {Dessine}
+        * \brief {Fonction permettant dessiner dans la fenêtre SDL nos lettres}
+        * \param[in] x 
+        * \param[in] width Largueur du bitmap
+        * \param[in] heigth Hauteur du bitmap
+        */
         void Dessine(int x, int width, int heigth) {
 
             Bitmap table(width,heigth);
