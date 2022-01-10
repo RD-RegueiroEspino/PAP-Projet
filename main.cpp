@@ -23,7 +23,9 @@ int main()
     std::cout<<x <<std::endl;
 
     AffichageSDL lettreSDL;
-    lettreSDL.Dessine(x, width, heigth);
+    Bitmap table = lettreSDL.Fenetre(x, width, heigth);
+    lettreSDL.Dessine(table);
+    
 
     return 0;
 }
